@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const opcs = document.getElementById("opcs");
 
     btn.addEventListener("click", () => {
-        opcs.style.display = opcs.style.display === "none" ? "flex" : "none";
+        const atual = getComputedStyle(opcs).display;
+        opcs.style.display = atual === "none" ? "flex" : "none";
     });
 });
+
